@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Cryptocurrency from "./Cryptocurrency";
-import { Card } from "react-bootstrap";
 import axios from "axios";
 
 import "./tickers.css";
