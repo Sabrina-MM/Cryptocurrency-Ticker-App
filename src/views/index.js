@@ -5,13 +5,12 @@ import "./views.css";
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <h2>Cryptocurrency Ticker</h2>
-      </div>
+    <div className="app">
+      <nav className="text-center m-0 text-white bg-dark p-3">
+        {" "}
+        <h1>Cryptocurrency Ticker</h1>
+      </nav>
       <Tickers />
-      <br />
-      <br />
     </div>
   );
 }

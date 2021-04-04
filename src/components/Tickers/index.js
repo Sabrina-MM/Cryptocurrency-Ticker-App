@@ -20,7 +20,7 @@ export default function Tickers() {
     fetchCryptocurrencyData();
   }
   return (
-    <div style={{ display: "inline-flex", flexWrap: "wrap", width: "75%" }}>
+    <div className="container">
       {data.slice(0, 6).map((item, index) => {
         return (
           <div className={"tickers card" + [index]}>
@@ -30,15 +30,27 @@ export default function Tickers() {
           </div>
         );
       })}
-      <div className="foot">
-        <label className="updated">Information updated </label>
-        <input
-          className="button"
-          type="button"
-          value="click"
-          onClick={() => fetchCryptocurrencyData()}
-        />
-      </div>
+      <footer className="text-center p-2">
+        <p className="mt-5">
+          Information updated every minute
+          <input
+            className="button ml-2"
+            type="button"
+            value="click"
+            onClick={() => fetchCryptocurrencyData()}
+          />
+        </p>
+        <small className="mt-5 mb-5">
+          @2020 This website was coded by <i>Sabrina Martinez</i>, and is{" "}
+          <a
+            href="https://hungry-williams-e0cd9f.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            open-sourced
+          </a>
+        </small>
+      </footer>
     </div>
   );
 }
